@@ -33,7 +33,6 @@ def getDateFromText(text):
     date = datetime.strptime(dateString, dateFormat)
     return date      
 
-"""
 with sync_playwright() as p:
     DATE_FORMAT = "%d/%m/%Y %H:%M:%S"
     browser = p.chromium.launch_persistent_context(user_data_dir='', headless=False)
@@ -62,18 +61,3 @@ with sync_playwright() as p:
 
     input()
     browser.close()
-"""
-allHTML = """
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Minha página de teste</title>
-  </head>
-  <body>
-    <img src="imagens/firefox-icon.png" alt="minha página de teste">
-  </body>
-</html>
-"""
-extractedMessages = open('extractedMessages.html', 'w')
-extractedMessages.write(allHTML)
